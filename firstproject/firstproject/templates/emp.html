@@ -1,0 +1,29 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>THE EMPLOYEE LIST IS:</h1>
+
+{% if emp_list %}
+<<table>
+  <<thead>
+    <<th>eno</th>
+    <<th>ename</th>
+    <<th>eaddr</th>
+  </thead>
+  {% for emp in emp_list %}
+  <<tr>
+    <<td>{{emp.no}}</td>
+    <<td>{{emp.ename}}</td>
+    <<td>{{emp.eaddr}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else%}
+<<p>NO data founded</p>
+{% endif %}
+  </body>
+</html>
